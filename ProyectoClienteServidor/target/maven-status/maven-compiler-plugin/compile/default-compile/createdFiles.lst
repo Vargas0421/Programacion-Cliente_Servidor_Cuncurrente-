@@ -1,0 +1,11 @@
+Articulos\Articulo$tipoDeArticulo.class
+MetodosDePago\Tarjeta.class
+MetodosDePago\Efectivo.class
+MetodosDePago\NewClass.class
+Structure\Cliente.class
+Structure\ProyectoClienteServidor.class
+MetodosDePago\MetodoDePago.class
+Structure\Cliente$MetodoDePagoss.class
+Structure\RegistroDeClientes.class
+Articulos\Articulo.class
+MetodosDePago\TransferenciaBancaria.class

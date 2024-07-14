@@ -1,26 +1,46 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package MetodosDePago;
 
-/**
- *
- * @author Brandon VM
- */
-public class Tarjeta implements
-        MetodoDePago {
+public class Tarjeta implements MetodoDePago {
 
-    private String numeroTarjeta;
-    private String fechaExpiracion;
-    private String cvv;
+    private int  numeroTarjeta;
+    private int fechaExpiracion;
+    private int cvv;
 
-    public Tarjeta(String numeroTarjeta, String fechaExpiracion, String cvv) {
+    public Tarjeta(int numeroTarjeta, int fechaExpiracion, int cvv) {
         this.numeroTarjeta = numeroTarjeta;
         this.fechaExpiracion = fechaExpiracion;
         this.cvv = cvv;
     }
 
+    public Tarjeta() {
+    }
+
+    public int getNumeroTarjeta() {
+        return numeroTarjeta;
+    }
+
+    public void setNumeroTarjeta(int numeroTarjeta) {
+        this.numeroTarjeta = numeroTarjeta;
+    }
+
+    public int getFechaExpiracion() {
+        return fechaExpiracion;
+    }
+
+    public void setFechaExpiracion(int fechaExpiracion) {
+        this.fechaExpiracion = fechaExpiracion;
+    }
+
+    public int getCvv() {
+        return cvv;
+    }
+
+    public void setCvv(int cvv) {
+        this.cvv = cvv;
+    }
+
+    
     @Override
     public void procesarPago(double monto) {
         // Lógica para procesar el pago con tarjeta de crédito

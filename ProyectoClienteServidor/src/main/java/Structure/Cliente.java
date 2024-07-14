@@ -17,7 +17,14 @@ public class Cliente {
     protected String direccionExacta;
     protected String email;
     protected double DineroEnLaCuenta;
-    protected MetodoDePago metodoDePago;
+    protected MetodoDePagoss metodoDePagos;
+    protected int dineroEnLaCuenta;
+    
+    public enum MetodoDePagoss{
+        Tarjeta,
+        Efectivo,
+        TranferenciaBancaria
+    }
 
     protected LinkedList<Articulo> carritoDeCompra = new LinkedList<>();
 
@@ -72,14 +79,15 @@ public class Cliente {
         this.DineroEnLaCuenta = DineroEnLaCuenta;
     }
 
-    public MetodoDePago getMetodoDePago() {
-        return metodoDePago;
+    public MetodoDePagoss getMetodoDePagos() {
+        return metodoDePagos;
     }
 
-    public void setMetodoDePago(MetodoDePago metodoDePago) {
-        this.metodoDePago = metodoDePago;
+    public void setMetodoDePagos(MetodoDePagoss metodoDePagos) {
+        this.metodoDePagos = metodoDePagos;
     }
 
+   
 
     public LinkedList<Articulo> getCarritoDeCompra() {
         return carritoDeCompra;
@@ -87,6 +95,15 @@ public class Cliente {
 
     public void setCarritoDeCompra(LinkedList<Articulo> carritoDeCompra) {
         this.carritoDeCompra = carritoDeCompra;
+    }
+
+    public boolean esEmailValido(String a) {
+        return a.contains("@");
+    }
+
+    @Override
+    public String toString() {
+        return Nnombre + "" + apellidos + ", id: " + cedula + ", vive en: " + direccionExacta + ", @; " + email + "\n";
     }
 
 }
