@@ -3,7 +3,7 @@ package Articulos;
 import java.util.LinkedList;
 import javax.swing.JOptionPane;
 
-public class GestionDeArticulo extends Articulo {
+public class  extends Articulo {
 
     protected LinkedList<Articulo> inventario = new LinkedList<>();
 
